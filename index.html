@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Kalydi Köpet</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom Fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	Nagy Ármin
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+                
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+	<!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Egy Kalydi köpet</h1>
+                <p><script>
+                    /*
+                        Math.random() returns a number between 0 and 1 excluding 1 itself.
+                        That together with floor function returns a number between 0 and
+                        max-1 (here max = sentence.length) and fits the zero-based numbering
+                        of the elements in the array
+                    */
+                    function getRandomSentence () {
+                        var index= Math.floor(Math.random() * (sentences.length));
+                        return sentences[index];
+                    }
+                    
+                    var sentences= [
+                        'Kedves gyerekek, ma a hatalmas nagy farkú farkasról fogok mesélni.',
+                        'A puding próbája az éves.',
+                        'Ez senkié ez a szopókás üveg? Bele van vízkövesedve a víz.',
+                        '-Csak a tinderprofilkáp tudja tanárúr. -Mindjár megtinderezlek én úgy.',
+                        'Bagzik a macska már megin.',
+                        'Zárójelet be kell zárni, mert reggelente még hideg van.',
+                        'Ti angolul szoktatok pornót nezni nem?',
+                        '-Ha mindenki azt csinálná amit szeretne, akkor én nem lennek itt. -Zéteny: hát én azt szeretném.',
+                        'Én mar két éve nem használtam tampont.',
+                        'Láttátok a harry koptert?',
+                        'Időnk van, tejünk van, miért ne szoptassunk?',
+                        'Kicsinyitsünk... Ezaz jó kis bélyeg lett.',
+                        '-Volt egy kémikus aki ezt kísérletezte. -Magán? -Hát nem rajtam.',
+                        'Lespóroltad az áfát vagy mi történt?',
+                        'Politikusoknak nem lehet hinni, azok külön állatfaj.',
+                        'Orosz gruppensex 2 orosz 2 csecsen.',
+                        'Ki üzen folyamatosan a Máténak?',
+                        '-Hát de én nem szeretnék... -ŐŐ, hát ez nem szerelem kérdése.',
+                        'Én meg a 2000-es évek elején jártam Pestre de azóta már nagyon multikulti.',
+                        'Bera Máténal háromszor nagyobb néger feküdt ott.',
+                        'Kérdeztem, hogy ki a fasírt?',
+                        'Hogy tudtam vonalat húzni, amikor radír vagyok?',
+                        '-Ez téged zavar toncsi? -Igen. -Jó akkor tovább csinalom.',
+                        'Nem akarok belefolyni ilyen jogi procedúrákba, ezért nem mondom el, hogy a Lakatos Gyuri volt',
+                        'Együtt pisiltünk 87-ben Debrecenben Orbán Viktorral, es bizonyára úgy emlékszik rá mint én',
+                        'És ha nekem nincs egy méteres... Szövetem.',
+                        '3 lábam van hogy el ne essek.',
+                        '-Ki kell számolni. -Köszönjük Zétény, én arra gondoltam hogy először eltáncolom.',
+                        '-Osztálykirándulás legyen az akc misi koncert! -Kicsoda? Akác Emese?',
+                        'Amikor fiatal voltam, vagyis most is az vagyok, nagyon régóta vagyok fiatal.',
+                        'Nem vagyok leszbikus.',
+                        'Engem fel vett egyszer stoppal egy buzi.',
+                        '-Meg kéne szerelni a radiátort. -És akkor télen mi lesz velünk?',
+                        'Önkéntesen lehet majd szopni.',
+                        'Gyereket vártunk és Tomi jött.'
+                    ];
+                    
+                    function scribble(){
+                      // get the canvas element you want to write to
+                      var canvas = document.getElementById("woodcut");
+                      // get a handle for the above canvas (here 2d only for simple text)
+                      var context = canvas.getContext("2d");
+                      // the canvas is blank the first time only, so erase the content
+                      // even if it is already blank, checking for it would be more
+                      // complicated and slower, too
+                      context.clearRect(0, 0, canvas.width, canvas.height);
+                      // choose a font (you can choose the size also as you can see)
+                      context.font = "30px Arial";
+                      // the letters are filled and they are filled in red
+                      context.fillStyle = "White";
+                      // put a random line in the middle of the canvas
+                      // the +10 account for the fonttype's height
+                      context.fillText(getRandomSentence(),0, canvas.height/2 + 10);
+                    }
+                    </script>
+                    </head>
+                    <body>
+                    Egy Kalydi köpet<br>
+                    <form id='form1' style="position:relative">
+                        <div id='d1' style="position:absolute; top:1000; left:0; z-index:1"> 
+                            <canvas id="woodcut" width="1770" height="100"
+                            style="border:10px solid #674eb3;">
+                    This text shows up if the canvas element is  not supported
+                    </canvas>
+                    <br>
+                    </body>
+                    <button style="background: darkcyan;color:white; height:50px;width:70px"
+                    onclick="scribble()">Klikk!</button>
+            </div>
+        </div>
+    </header>
+
+	<!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                	<span class="glyphicon glyphicon-apple" style="font-size: 60px"></span>
+                    <h2 class="section-heading">Minden köpet egy helyen.</h2>
+                    <p class="text-light">
+                        Kedves gyerekek, ma a hatalmas nagy farkú farkasról fogok mesélni.<br>
+                        A puding próbája az éves.<br>
+                        Ez senkié ez a szopókás üveg? Bele van vízkövesedve a víz.<br>
+                        -Csak a tinderprofilkáp tudja tanárúr. -Mindjár megtinderezlek én úgy.<br>
+                        Bagzik a macska már megin.<br>
+                        Zárójelet be kell zárni, mert reggelente még hideg van.<br>
+                        Ti angolul szoktatok pornót nezni nem?<br>
+                        -Ha mindenki azt csinálná amit szeretne, akkor én nem lennek itt. -Zéteny: hát én azt szeretném.<br>
+                        Én mar két éve nem használtam tampont.<br>
+                        Láttátok a harry koptert?<br>
+                        Időnk van, tejünk van, miért ne szoptassunk?<br>
+                        Kicsinyitsünk... Ezaz jó kis bélyeg lett.<br>
+                        -Volt egy kémikus aki ezt kísérletezte. -Magán? -Hát nem rajtam.<br>
+                        Lespóroltad az áfát vagy mi történt?<br>
+                        Politikusoknak nem lehet hinni, azok külön állatfaj.<br>
+                        Orosz gruppensex 2 orosz 2 csecsen.<br>
+                        Ki üzen folyamatosan a Máténak?<br>
+                        -Hát de én nem szeretnék... -ŐŐ, hát ez nem szerelem kérdése.<br>
+                        Én meg a 2000-es évek elején jártam Pestre de azóta már nagyon multikulti.<br>
+                        Bera Máténal háromszor nagyobb néger feküdt ott.<br>
+                        Kérdeztem, hogy ki a fasírt?<br>
+                        Hogy tudtam vonalat húzni, amikor radír vagyok?<br>
+                        -Ez téged zavar toncsi? -Igen. -Jó akkor tovább csinalom.<br>
+                        Nem akarok belefolyni ilyen jogi procedúrákba, ezért nem mondom el, hogy a Lakatos Gyuri volt.<br>
+                        Együtt pisiltünk 87-ben Debrecenben Orbán Viktorral, es bizonyára úgy emlékszik rá mint én.<br>
+                        És ha nekem nincs egy méteres... Szövetem.<br>
+                        3 lábam van hogy el ne essek.<br>
+                        -Ki kell számolni. -Köszönjük Zétény, én arra gondoltam hogy először eltáncolom.<br>
+                        -Osztálykirándulás legyen az akc misi koncert! -Kicsoda? Akác Emese?<br>
+                        Amikor fiatal voltam, vagyis most is az vagyok, nagyon régóta vagyok fiatal.<br>
+                        Nem vagyok leszbikus.<br>
+                        Engem fel vett egyszer stoppal egy buzi.<br>
+                        -Meg kéne szerelni a radiátort. -És akkor télen mi lesz velünk?<br>
+                        Önkéntesen lehet majd szopni.<br>
+                        Gyereket vártunk és Tomi jött.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    
+    <!-- Custom Javascript -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
